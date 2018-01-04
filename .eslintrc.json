@@ -1,0 +1,24 @@
+{
+  "extends": [
+    "airbnb",
+    "plugin:css-modules/recommended"
+  ],
+  "env": {
+    "browser": true
+  },
+  "plugins": [
+    "react",
+    "jsx-a11y",
+    "import",
+    "css-modules"
+  ],
+  "rules": {
+    "semi": [2, "never"],
+    "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
+    "no-use-before-define": ["error", { "functions": false }],
+    "jsx-a11y/anchor-is-valid": 0,
+    "import/no-extraneous-dependencies": 0,
+    "import/no-unresolved": 0,
+    "import/extensions": 0
+  }
+}
