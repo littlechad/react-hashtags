@@ -1,6 +1,6 @@
 {
   "name": "react-hashtags",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "a simple React component that checks # on a sentence and build a Link on it",
   "main": "build/index.js",
   "repository": {
