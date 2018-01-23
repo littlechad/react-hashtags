@@ -11,7 +11,7 @@ const Hashtag = (props) => {
       const str = string
       return str.startsWith('#')
         ? (<span key={uuid.v4()}><Link to={`${props.url}/${str.split('#')[1]}`}>{str}</Link></span>)
-        : (<span key={uuid.v4()}>str</span>)
+        : (<span key={uuid.v4()}>{str}</span>)
     })
     .reduce((prev, curr) => [prev, ' ', curr])
 
