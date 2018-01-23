@@ -2,22 +2,20 @@ import React from 'react'
 import { Link } from 'react-router'
 import PropTypes from 'prop-types'
 
+import uuid from 'uuid'
+
 const Hashtag = (props) => {
   const hashtag = props.string
     .split(' ')
     .map((string) => {
       const str = string
       return str.startsWith('#')
-        ? (<Link to={`${props.url}/${str.split('#')[1]}`}>{str}</Link>)
-        : str
+        ? (<span key={uuid.v4()}><Link to={`${props.url}/${str.split('#')[1]}`}>{str}</Link></span>)
+        : (<span key={uuid.v4()}>str</span>)
     })
     .reduce((prev, curr) => [prev, ' ', curr])
 
-  return (
-    <span>
-      {hashtag}
-    </span>
-  )
+  return hashtag
 }
 
 Hashtag.propTypes = {
